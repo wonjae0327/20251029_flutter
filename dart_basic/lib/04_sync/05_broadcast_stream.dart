@@ -19,6 +19,7 @@ void main() {
   });
 
   // add()를 실행할 때마다 listen()하는 모든 콜백 함수에 값이 주입됩니다.
+  // asBroadcastStream으로 인해 streamListener1,streamListener2 동시영향
   controller.sink.add(1);
   controller.sink.add(2);
   controller.sink.add(3);

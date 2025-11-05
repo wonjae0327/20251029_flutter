@@ -26,6 +26,6 @@ void main() async {
   });
   controller2.add("Hello");
   controller2.add("World");
-  controller2.close();
+  await controller2.close();
 
 }

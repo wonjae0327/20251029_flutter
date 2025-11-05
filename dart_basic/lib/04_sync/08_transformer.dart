@@ -1,7 +1,7 @@
 import 'dart:async';
 
 void main() async {
-  //Stream은 비동기적으로 데이터를 제공하므로 await를 사용불가
+  //Stream은 비동기적으로 데이터를 제공하므로 await를 사용하기 어려움.
   //await는 Future를 기다릴 때 사용하며, Stream은 listen()을 통해 데이터를 받음
   //listen()은 Future<void>를 반환하지 않으므로 await를 붙일 필요 없음
 
@@ -13,7 +13,7 @@ void main() async {
   }
   Stream<String> transformedStream = transformStream(numberStream);
   transformedStream.listen((data){print(data);});
-  await Future.delayed(Duration(seconds: 0));
+  await Future.delayed(Duration(milliseconds: 300));
 
   //2) StreamTransformer를 이용하여 스트림 데이터 변환
   final transformer = StreamTransformer<int, String>.fromHandlers(
@@ -37,7 +37,7 @@ void main() async {
   filteredStream.listen((data) {print("even value: $data");});
   await Future.delayed(Duration(seconds: 0));
 
-  //4) 여러 개의 변환 적용하기 (transform().transform())
+  //4) 여러 개의 stream을 한번에 변환 적용하기 (transform().transform())
   final doubleTransformer = StreamTransformer<int, int>.fromHandlers(
     handleData: (int value, EventSink<int> sink) {
       sink.add(value * 2);
