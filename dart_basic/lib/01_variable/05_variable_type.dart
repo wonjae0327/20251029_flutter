@@ -4,6 +4,7 @@ main() {
   // 변수의 타입으로 선언시 : 업뎃(O), 재선언(X), 타입 고정(O)
   // dart 언어에서 변수의 종류 : bool, int, double, String
   // null, Collection(List, Set, Map)
+  // Dart에 타입이름 중에 num이라고 존재함.
 
   bool isBool = false;
   print(isBool);

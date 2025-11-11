@@ -32,14 +32,13 @@ void main() async {
 
   // await countdown2(5);
   // await countdown2(5);
-  
   Bomb b = Bomb();
   b.start();
-  print("빨가선(0)과 파란선(1) 중에 선택하세요(숫자입력)");
+  print('빨간선(0)과 파란선(1) 중에 선택하세요(숫자입력)');
   StreamSubscription? inputSub;
   final input = stdin.transform(utf8.decoder).transform(LineSplitter());
   inputSub = input.listen((val) {
-    // bomb에다가 선택 된 값을 넘겨줘서 폭탄을 멈추게 하는 코드
+    // bomb에다가 선택된 값을 넘겨줘서 폭탄을 멈추게 하는 코드
     b.choice(val);
     inputSub?.cancel();
   });
@@ -51,14 +50,12 @@ class Bomb {
 
   Future<void> start() async {
     for (int i = 10; i > 0; i--) {
-      if (state) {
-        return;
-      }
-
+      if (state) return;
       print(i);
       await Future.delayed(Duration(milliseconds: 500));
     }
     if (!state) {
+      print("꼬ㅏㅇ~!");
       exit(-1);
     }
   }
@@ -66,9 +63,9 @@ class Bomb {
   void choice(String input) {
     state = true;
     if (int.parse(input) == lifeLine) {
-      print("stop");
+      print("살았다.");
     } else {
-      print("boom");
+      print("꽝!");
     }
   }
 }

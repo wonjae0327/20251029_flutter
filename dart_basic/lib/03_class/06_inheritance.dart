@@ -17,12 +17,13 @@ void main() {
   // 상속관계에서 형변환 : 모든 클래스가 Object를 상속
   // Child c3 = Parent(); //부->자 No(Downcasting):명시
   Parent p3 = Child(); //  자->부 Ok(Upcasting) : 자동
-  print(p3.instanceVar);
+  print("===== ${p3.instanceVar}");//중복될 경우 자식 속성
+  p3.instanceMethod(); //중복될 경우 자식 메서드(일관성)
+
   // as 연산자:: 상속 관계일 때 특정 타입으로 변환하기 위한 명령어
   Child c3 = p3 as Child; // 자->부->자 Ok : 명시적 다운캐스팅
-  print(p3.instanceVar);  // 중복될 경우 자식 속성
-  p3.instanceMethod();  // 중복될 경우 자식 메서드(일관성)
-
+  print(p3.instanceVar);
+  p3.instanceMethod();
   // p3.childMethod(); // 부모가 자식만의 소유에 접근 불가
   c3.childMethod();
 

@@ -1,11 +1,10 @@
 void main() {
   Idol idol = Idol("IVE", 5);
-  idol.sayIdol();
-  idol.sayMembersCount();
+  idol.sayIdol();idol.sayMemberCount();
 
-  Idol blackPink = Idol("black", 3)
+  Idol blackPink = Idol("블랙핑크", 3)
   ..sayIdol()
-  ..sayMembersCount();
+  ..sayMemberCount();
 }
 
 class Idol {
@@ -13,11 +12,6 @@ class Idol {
   final int membersCount;
   Idol(this.name, this.membersCount);
 
-  void sayIdol() {
-    print("$name");
-  }
-
-  void sayMembersCount() {
-    print("$membersCount 명");
-  }
+  void sayIdol(){print("$name 입니다.");}
+  void sayMemberCount(){print("$membersCount 명 입니다.");}
 }
