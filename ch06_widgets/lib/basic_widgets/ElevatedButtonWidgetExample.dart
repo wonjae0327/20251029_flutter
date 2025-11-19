@@ -1,5 +1,4 @@
 import 'package:ch06_widgets/basic_widgets/GestureDetectorWidgetExample.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ElevatedButtonWidgetExample extends StatelessWidget {

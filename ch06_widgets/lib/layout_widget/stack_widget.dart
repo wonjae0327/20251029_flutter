@@ -15,7 +15,7 @@ class StackWidgetExample extends StatelessWidget {
       // ),
       child: IndexedStack(
         // IndexedStack은 Stack과 달리 하나만 표시
-        index: 1,
+        index: 2, // 하나만 인덱스로 지정 가능
         children: [
           Container(height: 300.0, width: 300.0, color: Colors.red),
           Container(height: 250.0, width: 250.0, color: Colors.yellow),

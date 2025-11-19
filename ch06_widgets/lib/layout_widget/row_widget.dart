@@ -11,9 +11,9 @@ class RowWidgetExample extends StatelessWidget {
         // start: 시작에 정렬, center: 중앙에 정렬, end: 끝에 정렬
         // spaceBetween: 자식 위제의 간격을 균등하게 정렬
         // spaceAround, spaceEvenly
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center, // 수평
         // start, center, end, stretch
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start, // 수직
         children: [
           Container(height: 50.0, width: 50.0, color: Colors.red),
           // const SizedBox(width: 12.0),

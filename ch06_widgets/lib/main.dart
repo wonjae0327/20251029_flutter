@@ -15,6 +15,7 @@ import 'package:ch06_widgets/layout_widget/column_widget.dart';
 import 'package:ch06_widgets/layout_widget/expanded_widget.dart';
 import 'package:ch06_widgets/layout_widget/flexible_expanded_mixed_widget.dart';
 import 'package:ch06_widgets/layout_widget/flexible_widget.dart';
+import 'package:ch06_widgets/layout_widget/login_screen_absolute.dart';
 import 'package:ch06_widgets/layout_widget/row_widget.dart';
 import 'package:ch06_widgets/layout_widget/stack_widget.dart';
 import 'package:flutter/material.dart';
@@ -55,11 +56,11 @@ class MyApp extends StatelessWidget {
               //     IconButtonWidgetExample(), // 글꼴의 아이콘을 이용한 버튼
               //     TextButtonWidgetExample(), // 배경색과 그림자가 없고 글자만 있음
               //     TextWidgetExample(), // 텍스트만 있음 */
-              //     //디자인 관련 위젯: 배경 추가, 간격 추가, 패팅 추가등
+              //     //디자인 관련 위젯: 배경 추가, 간격 추가, 패딩 추가등
               //     // (X)SafeAreaWidgetExample(), //Scaffold에서 지정해서 생략
-              //     // PaddingWidgetExample(),
-              //     // SizedBoxWidgetExample(),
-              //     // ContainerWidgetExample()
+              //     PaddingWidgetExample(),
+              //     SizedBoxWidgetExample(),
+              //     ContainerWidgetExample()
               //   ],
               // ),
 
@@ -71,7 +72,7 @@ class MyApp extends StatelessWidget {
               // child: FlexibleExpandedMixedWidgetExample(),
               // child: StackWidgetExample(),
               // child: AbsoluteLayoutWidgetExample(),
-              // child: LoginScreen(),
+              child: LoginScreen(),
             ),
           ),
         ),
